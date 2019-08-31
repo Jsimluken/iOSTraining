@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		444383790DE871ED5D55F6C9 /* Pods_SemiModal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB1BF6EE0241081397A3983 /* Pods_SemiModal.framework */; };
+		5AEDBE53231A6FA200C1087A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDBE52231A6FA200C1087A /* AppDelegate.swift */; };
+		5AEDBE55231A6FA200C1087A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDBE54231A6FA200C1087A /* ViewController.swift */; };
+		5AEDBE58231A6FA200C1087A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AEDBE56231A6FA200C1087A /* Main.storyboard */; };
+		5AEDBE5A231A6FA400C1087A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AEDBE59231A6FA400C1087A /* Assets.xcassets */; };
+		5AEDBE5D231A6FA400C1087A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AEDBE5B231A6FA400C1087A /* LaunchScreen.storyboard */; };
+		5AEDBE65231A719400C1087A /* SemiModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEDBE64231A719400C1087A /* SemiModalViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3CB1BF6EE0241081397A3983 /* Pods_SemiModal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SemiModal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		578833E798AD5813EA6294AC /* Pods-SemiModal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemiModal.release.xcconfig"; path = "Target Support Files/Pods-SemiModal/Pods-SemiModal.release.xcconfig"; sourceTree = "<group>"; };
+		5AEDBE4F231A6FA100C1087A /* SemiModal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SemiModal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AEDBE52231A6FA200C1087A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5AEDBE54231A6FA200C1087A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5AEDBE57231A6FA200C1087A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5AEDBE59231A6FA400C1087A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5AEDBE5C231A6FA400C1087A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5AEDBE5E231A6FA400C1087A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AEDBE64231A719400C1087A /* SemiModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemiModalViewController.swift; sourceTree = "<group>"; };
+		82530AB12A0DAF94791E2851 /* Pods-SemiModal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SemiModal.debug.xcconfig"; path = "Target Support Files/Pods-SemiModal/Pods-SemiModal.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AEDBE4C231A6FA100C1087A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				444383790DE871ED5D55F6C9 /* Pods_SemiModal.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AEDBE46231A6FA100C1087A = {
+			isa = PBXGroup;
+			children = (
+				5AEDBE51231A6FA200C1087A /* SemiModal */,
+				5AEDBE50231A6FA100C1087A /* Products */,
+				C3526A840CB3EBFD8EF8AFEC /* Pods */,
+				BAEC992B4BF2BD85C1CE4C2B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5AEDBE50231A6FA100C1087A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AEDBE4F231A6FA100C1087A /* SemiModal.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AEDBE51231A6FA200C1087A /* SemiModal */ = {
+			isa = PBXGroup;
+			children = (
+				5AEDBE52231A6FA200C1087A /* AppDelegate.swift */,
+				5AEDBE54231A6FA200C1087A /* ViewController.swift */,
+				5AEDBE64231A719400C1087A /* SemiModalViewController.swift */,
+				5AEDBE56231A6FA200C1087A /* Main.storyboard */,
+				5AEDBE59231A6FA400C1087A /* Assets.xcassets */,
+				5AEDBE5B231A6FA400C1087A /* LaunchScreen.storyboard */,
+				5AEDBE5E231A6FA400C1087A /* Info.plist */,
+			);
+			path = SemiModal;
+			sourceTree = "<group>";
+		};
+		BAEC992B4BF2BD85C1CE4C2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CB1BF6EE0241081397A3983 /* Pods_SemiModal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3526A840CB3EBFD8EF8AFEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82530AB12A0DAF94791E2851 /* Pods-SemiModal.debug.xcconfig */,
+				578833E798AD5813EA6294AC /* Pods-SemiModal.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AEDBE4E231A6FA100C1087A /* SemiModal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AEDBE61231A6FA400C1087A /* Build configuration list for PBXNativeTarget "SemiModal" */;
+			buildPhases = (
+				367CE9666B8477214D62F097 /* [CP] Check Pods Manifest.lock */,
+				5AEDBE4B231A6FA100C1087A /* Sources */,
+				5AEDBE4C231A6FA100C1087A /* Frameworks */,
+				5AEDBE4D231A6FA100C1087A /* Resources */,
+				FAE5528D4543E2386924551A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SemiModal;
+			productName = SemiModal;
+			productReference = 5AEDBE4F231A6FA100C1087A /* SemiModal.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AEDBE47231A6FA100C1087A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Michael Laurents";
+				TargetAttributes = {
+					5AEDBE4E231A6FA100C1087A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 5AEDBE4A231A6FA100C1087A /* Build configuration list for PBXProject "SemiModal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AEDBE46231A6FA100C1087A;
+			productRefGroup = 5AEDBE50231A6FA100C1087A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AEDBE4E231A6FA100C1087A /* SemiModal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AEDBE4D231A6FA100C1087A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEDBE5D231A6FA400C1087A /* LaunchScreen.storyboard in Resources */,
+				5AEDBE5A231A6FA400C1087A /* Assets.xcassets in Resources */,
+				5AEDBE58231A6FA200C1087A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		367CE9666B8477214D62F097 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SemiModal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE5528D4543E2386924551A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SemiModal/Pods-SemiModal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FloatingPanel/FloatingPanel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FloatingPanel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SemiModal/Pods-SemiModal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AEDBE4B231A6FA100C1087A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEDBE65231A719400C1087A /* SemiModalViewController.swift in Sources */,
+				5AEDBE55231A6FA200C1087A /* ViewController.swift in Sources */,
+				5AEDBE53231A6FA200C1087A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5AEDBE56231A6FA200C1087A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AEDBE57231A6FA200C1087A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5AEDBE5B231A6FA400C1087A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5AEDBE5C231A6FA400C1087A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5AEDBE5F231A6FA400C1087A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5AEDBE60231A6FA400C1087A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AEDBE62231A6FA400C1087A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82530AB12A0DAF94791E2851 /* Pods-SemiModal.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4S6Q6TZPQZ;
+				INFOPLIST_FILE = SemiModal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.michael.SemiModal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AEDBE63231A6FA400C1087A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 578833E798AD5813EA6294AC /* Pods-SemiModal.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4S6Q6TZPQZ;
+				INFOPLIST_FILE = SemiModal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.michael.SemiModal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AEDBE4A231A6FA100C1087A /* Build configuration list for PBXProject "SemiModal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AEDBE5F231A6FA400C1087A /* Debug */,
+				5AEDBE60231A6FA400C1087A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AEDBE61231A6FA400C1087A /* Build configuration list for PBXNativeTarget "SemiModal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AEDBE62231A6FA400C1087A /* Debug */,
+				5AEDBE63231A6FA400C1087A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AEDBE47231A6FA100C1087A /* Project object */;
+}
