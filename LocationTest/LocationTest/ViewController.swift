@@ -11,6 +11,7 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var label: UILabel!
     lazy var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
@@ -39,7 +40,8 @@ extension ViewController : CLLocationManagerDelegate {
         let location = locations.first
         let latitude = location?.coordinate.latitude
         let longitude = location?.coordinate.longitude
-        print("latitude: \(latitude!)\nlongitude: \(longitude!)")  
+        print("latitude: \(latitude!)\nlongitude: \(longitude!)")
+        label.text = "latitude: \(latitude!)\n longitude: \(longitude!)"
     }
 }
 
