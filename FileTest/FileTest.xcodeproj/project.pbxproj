@@ -13,6 +13,7 @@
 		5AF9F6952345939D001600E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9F6932345939D001600E1 /* Main.storyboard */; };
 		5AF9F6972345939E001600E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9F6962345939E001600E1 /* Assets.xcassets */; };
 		5AF9F69A2345939E001600E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9F6982345939E001600E1 /* LaunchScreen.storyboard */; };
+		5AF9F6A223459451001600E1 /* test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5AF9F6A123459451001600E1 /* test.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5AF9F6962345939E001600E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AF9F6992345939E001600E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AF9F69B2345939E001600E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AF9F6A123459451001600E1 /* test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5AF9F68D2345939D001600E1 /* AppDelegate.swift */,
 				5AF9F68F2345939D001600E1 /* SceneDelegate.swift */,
 				5AF9F6912345939D001600E1 /* ViewController.swift */,
+				5AF9F6A123459451001600E1 /* test.txt */,
 				5AF9F6932345939D001600E1 /* Main.storyboard */,
 				5AF9F6962345939E001600E1 /* Assets.xcassets */,
 				5AF9F6982345939E001600E1 /* LaunchScreen.storyboard */,
@@ -127,6 +130,7 @@
 			files = (
 				5AF9F69A2345939E001600E1 /* LaunchScreen.storyboard in Resources */,
 				5AF9F6972345939E001600E1 /* Assets.xcassets in Resources */,
+				5AF9F6A223459451001600E1 /* test.txt in Resources */,
 				5AF9F6952345939D001600E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
