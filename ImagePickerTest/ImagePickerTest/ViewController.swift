@@ -14,6 +14,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
     var picker: UIImagePickerController! = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageView.contentMode = .scaleAspectFill
+        
         // Do any additional setup after loading the view.
 
     }
