@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mnist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
-        <!--Image View Controller-->
+        <!--Tap to predict...-->
         <scene sceneID="NLj-Fw-vNA">
             <objects>
-                <viewController id="m7i-UG-KHQ" customClass="ImageViewController" customModule="CollectionTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="m7i-UG-KHQ" customClass="ImageViewController" customModule="Mnist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g15-cX-A84">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,9 +87,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sdl-k8-RQH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CUi-sB-MKD"/>
+                    <navigationItem key="navigationItem" title="Tap to predict..." id="5jT-bF-u7c"/>
                     <connections>
                         <outlet property="imageView" destination="ugm-bP-XGQ" id="7st-cQ-RPy"/>
+                        <outlet property="navItem" destination="5jT-bF-u7c" id="NTZ-5X-gz1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSK-Xz-e3I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

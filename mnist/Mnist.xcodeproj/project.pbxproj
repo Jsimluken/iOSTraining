@@ -34,7 +34,7 @@
 		5A1B5E51236152860045255E /* test17.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1B5E47236152850045255E /* test17.png */; };
 		5A1B5E52236152860045255E /* test11.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A1B5E48236152860045255E /* test11.png */; };
 		5A1B5E54236154070045255E /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B5E53236154070045255E /* ImageViewController.swift */; };
-		5A1B5E582361D4EA0045255E /* mnist.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B5E572361D4EA0045255E /* mnist.mlmodel */; };
+		A8AB071A23629DEF008E1081 /* mnist.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A8AB071923629DEF008E1081 /* mnist.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +67,7 @@
 		5A1B5E47236152850045255E /* test17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test17.png; sourceTree = "<group>"; };
 		5A1B5E48236152860045255E /* test11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test11.png; sourceTree = "<group>"; };
 		5A1B5E53236154070045255E /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		5A1B5E572361D4EA0045255E /* mnist.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = mnist.mlmodel; path = ../../../mnist_data/mnist.mlmodel; sourceTree = "<group>"; };
+		A8AB071923629DEF008E1081 /* mnist.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = mnist.mlmodel; path = ../../../mnist.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 			children = (
 				5A1B5E2D23614FC20045255E /* test0.png */,
 				5A1B5E2C23614FC20045255E /* test1.png */,
-				5A1B5E572361D4EA0045255E /* mnist.mlmodel */,
+				A8AB071923629DEF008E1081 /* mnist.mlmodel */,
 				5A1B5E2E23614FC20045255E /* test2.png */,
 				5A1B5E2B23614FC20045255E /* test3.png */,
 				5A1B5E2F23614FC20045255E /* test4.png */,
@@ -228,7 +228,7 @@
 				5A1B5E1823613F140045255E /* AppDelegate.swift in Sources */,
 				5A1B5E54236154070045255E /* ImageViewController.swift in Sources */,
 				5A1B5E1A23613F140045255E /* SceneDelegate.swift in Sources */,
-				5A1B5E582361D4EA0045255E /* mnist.mlmodel in Sources */,
+				A8AB071A23629DEF008E1081 /* mnist.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

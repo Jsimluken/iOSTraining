@@ -11,58 +11,75 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var session: AVCaptureSession!
-    var device: AVCaptureDevice!
-    var output: AVCaptureVideoDataOutput!
-    var cameraPosition = AVCaptureDevice.Position.back
+    let session = AVCaptureSession()
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupAVCaptureOutput()
+        setupAVCaptureInput()
+        imageView.contentMode = .scaleAspectFill
+        session.startRunning()
     }
-
-    private func prepareCamera() {
-        // Prepare a video capturing session.
-        self.session = AVCaptureSession()
-        self.session.sessionPreset = AVCaptureSession.Preset.vga640x480 // not work in iOS simulator
-        self.device = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: cameraPosition)
-        if (self.device == nil) {
-            print("no device")
-            return
-        }
+    
+    func setupAVCaptureInput(){
+        session.sessionPreset = .vga640x480
+        var deviceInput: AVCaptureDeviceInput!
+        let videoDevice = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back).devices.first
         do {
-            let input = try AVCaptureDeviceInput(device: self.device)
-            self.session.addInput(input)
+            deviceInput = try AVCaptureDeviceInput(device: videoDevice!)
         } catch {
-            print("no device input")
+            print("Could not create video device input: \(error)")
             return
         }
-        self.output = AVCaptureVideoDataOutput()
-        self.output.videoSettings = [ kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA) ]
-        let queue: DispatchQueue = DispatchQueue(label: "videocapturequeue", attributes: [])
-        self.output.setSampleBufferDelegate(self, queue: queue)
-        self.output.alwaysDiscardsLateVideoFrames = true
-        if self.session.canAddOutput(self.output) {
-            self.session.addOutput(self.output)
-        } else {
-            print("could not add a session output")
+        
+        
+        guard session.canAddInput(deviceInput) else {
+            print("Could not add video device input to the session")
+            session.commitConfiguration()
             return
         }
-        do {
-            try self.device.lockForConfiguration()
-            self.device.activeVideoMinFrameDuration = CMTimeMake(value: 1, timescale: 20) // 20 fps
-            self.device.unlockForConfiguration()
-        } catch {
-            print("could not configure a device")
-            return
-        }
+        session.addInput(deviceInput)
+        //session.beginConfiguration()
+        
     }
+    
+    func setupAVCaptureOutput(){
+        let videoDataOutput = AVCaptureVideoDataOutput()
+        let videoDataOutputQueue = DispatchQueue(label: "VideoDataOutput", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
+        
+        guard session.canAddOutput(videoDataOutput) else{
+            print("Could not add video data output to the session")
+            session.commitConfiguration()
+            return
+        }
+        session.addOutput(videoDataOutput)
+        videoDataOutput.alwaysDiscardsLateVideoFrames = true
+        videoDataOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_420YpCbCr8BiPlanarFullRange)]
+        videoDataOutput.setSampleBufferDelegate(self, queue: videoDataOutputQueue)
+        let captureConnection = videoDataOutput.connection(with: .video)
+        captureConnection?.isEnabled = true
+    }
+    
 
 }
 
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let buffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            print("could not get a pixel buffer")
+            return
+        }
         
+        let image = CIImage(cvPixelBuffer: buffer).oriented(CGImagePropertyOrientation.right)
+        let capturedImage = UIImage(ciImage: image)
+        DispatchQueue.main.async {
+            self.imageView.image = capturedImage
+        }
     }
 }
 
