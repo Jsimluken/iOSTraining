@@ -15,6 +15,10 @@
 		5A675F34236DC88900BDB552 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A675F33236DC88900BDB552 /* Assets.xcassets */; };
 		5A675F37236DC88900BDB552 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A675F35236DC88900BDB552 /* LaunchScreen.storyboard */; };
 		5A675F3F236DCAF100BDB552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A675F3E236DCAF100BDB552 /* GoogleService-Info.plist */; };
+		A8110D03237531A800107EF2 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8110D02237531A800107EF2 /* CollectionViewController.swift */; };
+		A8110D052375449200107EF2 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8110D042375449200107EF2 /* ImageViewController.swift */; };
+		A8110D072375603D00107EF2 /* facenet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A8110D062375603D00107EF2 /* facenet.mlmodel */; };
+		A8110D09237560A000107EF2 /* Scaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8110D08237560A000107EF2 /* Scaling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		5A675F3E236DCAF100BDB552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5BBA5E53A6EEDAECB9AFC4AA /* Pods-FireFace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFace.debug.xcconfig"; path = "Target Support Files/Pods-FireFace/Pods-FireFace.debug.xcconfig"; sourceTree = "<group>"; };
 		9AA994BD0E900500E5CD5616 /* Pods-FireFace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireFace.release.xcconfig"; path = "Target Support Files/Pods-FireFace/Pods-FireFace.release.xcconfig"; sourceTree = "<group>"; };
+		A8110D02237531A800107EF2 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		A8110D042375449200107EF2 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		A8110D062375603D00107EF2 /* facenet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = facenet.mlmodel; sourceTree = "<group>"; };
+		A8110D08237560A000107EF2 /* Scaling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scaling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +76,12 @@
 				5A675F2A236DC88500BDB552 /* AppDelegate.swift */,
 				5A675F2C236DC88500BDB552 /* SceneDelegate.swift */,
 				5A675F2E236DC88500BDB552 /* ViewController.swift */,
+				A8110D02237531A800107EF2 /* CollectionViewController.swift */,
+				A8110D08237560A000107EF2 /* Scaling.swift */,
 				5A675F3E236DCAF100BDB552 /* GoogleService-Info.plist */,
+				A8110D062375603D00107EF2 /* facenet.mlmodel */,
 				5A675F30236DC88500BDB552 /* Main.storyboard */,
+				A8110D042375449200107EF2 /* ImageViewController.swift */,
 				5A675F33236DC88900BDB552 /* Assets.xcassets */,
 				5A675F35236DC88900BDB552 /* LaunchScreen.storyboard */,
 				5A675F38236DC88900BDB552 /* Info.plist */,
@@ -228,9 +240,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8110D03237531A800107EF2 /* CollectionViewController.swift in Sources */,
 				5A675F2F236DC88500BDB552 /* ViewController.swift in Sources */,
+				A8110D052375449200107EF2 /* ImageViewController.swift in Sources */,
+				A8110D09237560A000107EF2 /* Scaling.swift in Sources */,
 				5A675F2B236DC88500BDB552 /* AppDelegate.swift in Sources */,
 				5A675F2D236DC88500BDB552 /* SceneDelegate.swift in Sources */,
+				A8110D072375603D00107EF2 /* facenet.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

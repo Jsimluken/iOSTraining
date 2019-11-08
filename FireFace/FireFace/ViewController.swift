@@ -13,7 +13,9 @@ import Firebase
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var imageView: UIImageView!
+    
     let session = AVCaptureSession()
     let vision = Vision.vision()
     let cameraPosition = AVCaptureDevice.Position.back
@@ -23,6 +25,8 @@ class ViewController: UIViewController {
     var lastPicture:UIImage? = nil
     
     var faces:[CGRect] = []
+    var images:[UIImage] = []
+    let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     
     lazy var options = { () -> VisionFaceDetectorOptions in 
         let options = VisionFaceDetectorOptions()
@@ -40,10 +44,23 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupAVCaptureOutput()
         setupAVCaptureInput()
+        
+        //let angle = CGFloat((90.0 * M_PI) / 180.0)
+        //imageView.transform = CGAffineTransform(rotationAngle: angle)
         imageView.contentMode = .scaleAspectFill
         session.startRunning()
         //print("faceDetector!!!: ",faceDetector)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        session.startRunning()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        session.stopRunning()
     }
     
     func setupAVCaptureOutput(){
@@ -102,6 +119,42 @@ class ViewController: UIViewController {
             return .leftTop
         }
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        performSegue(withIdentifier: "toCollection", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCollection" {
+            let next = segue.destination as! CollectionViewController
+            
+            /*let image = self.lastPicture!
+            var cgImage:CGImage? = nil
+            if image.cgImage != nil {
+                
+                cgImage = image.cgImage
+                //context.createCGImage(ciImage!, from: ciImage.extent)!
+            }else{
+                cgImage = context.createCGImage(image.ciImage!, from: image.ciImage!.extent)
+            }
+            
+            var images:[UIImage] = []
+            for face in faces {
+                images.append(UIImage(cgImage: cgImage!.cropping(to: face)!))
+            }*/
+            next.images = images
+        }else if segue.identifier == "toList" {
+            let next = segue.destination as! CollectionViewController
+            var files:[String] = try! FileManager.default.contentsOfDirectory(atPath: FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].path)
+            var images:[UIImage] = []
+            for file in files {
+                let path = documentURL.appendingPathComponent(file)
+                print("file is \(file)!!")
+                images.append(UIImage(contentsOfFile: path.path)!)
+            }
+            next.images = images
+        }
+    }
 
 
 }
@@ -117,15 +170,17 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         let cgImage = context.createCGImage(ciImage, from: ciImage.extent)!
         //var capturedImage = UIImage(cgImage:cgImage)
-        var capturedImage = UIImage(ciImage:ciImage)
+        var capturedImage = UIImage(ciImage: ciImage)
+        //var capturedImage = UIImage(ciImage: ciImage, scale: 1, orientation: .right)
         
-        lastPicture = capturedImage
+        //lastPicture = capturedImage
        // print("orientation: \(UIDevice.current.orientation == .unknown)")
-        metadata.orientation = imageOrientation(
+        /*metadata.orientation = imageOrientation(
             deviceOrientation: UIDevice.current.orientation,
             cameraPosition: cameraPosition
-        )
-        //metadata.orientation = .leftTop
+        )*/
+        //metadata.orientation = .topRight
+        metadata.orientation = .leftTop
         let vision_image = VisionImage(buffer: sampleBuffer)
         //let vision_image = VisionImage(image: UIImage(cgImage: cgImage))
         vision_image.metadata = metadata
@@ -141,14 +196,17 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
               return
         
             }
-            var image = self.lastPicture!
+            //var image = self.lastPicture!
+            var image = capturedImage
             let imageSize = capturedImage.size
             self.faces = []
+            self.images = []
             DispatchQueue.main.async {
                 for face in faces {
                     let frame = face.frame
-                    print("frame: \(frame)")
+                   // print("frame: \(frame)")
                     self.faces.append(face.frame)
+                    self.images.append(UIImage(cgImage: cgImage.cropping(to: face.frame)!).rotatedBy(degree: 90, isCropped: false))
                     UIGraphicsBeginImageContextWithOptions(imageSize, false, 0.0)
                     let context = UIGraphicsGetCurrentContext()
                     image.draw(in: CGRect(origin: .zero, size: imageSize))
@@ -160,7 +218,30 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                     UIGraphicsEndImageContext()
                     image = drawnImage!
                 }
+                
+                
+                //print(image.ciImage)
                 self.lastPicture = image
+                
+                
+                if let ciImage = image.ciImage {
+                    self.lastPicture = UIImage(ciImage: ciImage.oriented(.right))
+                } else if let cgImage = image.cgImage{
+                     self.lastPicture = image.rotatedBy(degree: 90, isCropped: false)
+                }else{
+                    print("fuck")
+                }
+                
+                /*if let ciImage = image.ciImage {
+                    self.lastPicture = UIImage(ciImage: ciImage.oriented(.right))
+                    print("Yatta!!")
+                }else {
+                    print("Fuck!!")
+                     }*/
+                
+                
+                //let res_ciImage = image.ciImage!.oriented(.right)
+                //self.lastPicture = UIImage(ciImage: res_ciImage)
                 //self.imageView.image = self.lastPicture
                 self.imageView.image = self.lastPicture
             }
@@ -169,6 +250,31 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             
         }*/
     }
+}
+
+
+
+extension UIImage {
+
+    func rotatedBy(degree: CGFloat, isCropped: Bool = true) -> UIImage {
+        let radian = -degree * CGFloat.pi / 180
+        var rotatedRect = CGRect(origin: .zero, size: self.size)
+        if !isCropped {
+            rotatedRect = rotatedRect.applying(CGAffineTransform(rotationAngle: radian))
+        }
+        UIGraphicsBeginImageContext(rotatedRect.size)
+        let context = UIGraphicsGetCurrentContext()!
+        context.translateBy(x: rotatedRect.size.width / 2, y: rotatedRect.size.height / 2)
+        context.scaleBy(x: 1.0, y: -1.0)
+
+        context.rotate(by: radian)
+        context.draw(self.cgImage!, in: CGRect(x: -(self.size.width / 2), y: -(self.size.height / 2), width: self.size.width, height: self.size.height))
+
+        let rotatedImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return rotatedImage
+    }
+
 }
 
 
